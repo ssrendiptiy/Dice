@@ -1,12 +1,4 @@
-Die dice1;
-Die dice2;
-Die dice3;
-Die dice4;
-Die dice5;
-Die dice6;
-Die dice7;
-Die dice8;
-Die dice9;
+Die dice;
 int totalRoll = 0;
 void setup(){
   noLoop();
@@ -15,38 +7,13 @@ void setup(){
 
 void draw(){
   background(#368122);
-  /*for(int y = 50; y <= 500; y += 150){
+  for(int y = 50; y <= 400; y += 150){
     for(int x = 50; x <= 500; x += 150){
-      dice = new Die(x, y);
+      Die dice = new Die(x, y);
+      dice.roll();
+      dice.show();
     }
-  }*/
-  dice1 = new Die(50, 50);
-  dice2 = new Die(50, 200);
-  dice3 = new Die(50, 350);
-  dice4 = new Die(200, 50);
-  dice5 = new Die(200, 200);
-  dice6 = new Die(200, 350);
-  dice7 = new Die(350, 50);
-  dice8 = new Die(350, 200);
-  dice9 = new Die(350, 350);
-  dice1.roll();
-  dice1.show();
-  dice2.roll();
-  dice2.show();
-  dice3.roll();
-  dice3.show();
-  dice4.roll();
-  dice4.show();
-  dice5.roll();
-  dice5.show();
-  dice6.roll();
-  dice6.show();
-  dice7.roll();
-  dice7.show();
-  dice8.roll();
-  dice8.show();
-  dice9.roll();
-  dice9.show();
+   }
   textSize(75);
   text("Total: " + totalRoll, 110, 550);
 }
@@ -64,8 +31,9 @@ class Die{
     myY = y;
   }
   void roll(){
-    roll = (int)(Math.random()*7+1);
+    roll = (int)(Math.random()*6+1);
     totalRoll = totalRoll + roll;
+    System.out.println(roll);
   }
   void show(){
     fill(#FFFFFF);
@@ -100,11 +68,6 @@ class Die{
     }
   }
 }
-
-
-
-
-
 
 
 
