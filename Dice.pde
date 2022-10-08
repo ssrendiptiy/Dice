@@ -33,7 +33,6 @@ class Die{
   void roll(){
     roll = (int)(Math.random()*6+1);
     totalRoll = totalRoll + roll;
-    System.out.println(roll);
   }
   void show(){
     fill(#FFFFFF);
